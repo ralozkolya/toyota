@@ -1,0 +1,28 @@
+#slider {
+	position: relative;
+}
+
+.slides-container {
+	overflow: hidden;
+}
+
+.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	display: none;
+}
+
+.slide:first-child {
+	display: block;
+}
+
+.first-dealer {
+	margin: 70px 0;
+	color: #cf0619;
+}

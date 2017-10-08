@@ -1,0 +1,24 @@
+img {
+	max-width: 100%;
+}
+
+h3 {
+	font-family: 'BPG Nino Mtavruli Regular';
+}
+
+.offer {
+	padding: 20px 0;
+	border-bottom: solid 1px #ccc;
+}
+
+.offer h2 {
+	margin-top: 0;
+}
+
+.more-button {
+	margin-bottom: 20px;
+}
+
+.offer-title {
+	margin-top: 0;
+}

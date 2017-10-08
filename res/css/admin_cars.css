@@ -1,0 +1,25 @@
+.config-selector, .accessories-selector {
+	text-align: center;
+	font-family: BPG Arial;
+}
+
+.accessories-selector > .col-sm-2 {
+	overflow: hidden;
+}
+
+.config-selector > .col-sm-3 > a > img, .accessories-selector > .col-sm-2 > a > img {
+	width: 100%;
+}
+
+.delete-picture {
+	margin: 10px auto;
+}
+
+.delete-picture > .col-sm-2 > img {
+	width: 100%;
+	cursor: pointer;
+}
+
+.ui-accordion-header {
+	background: none !important;
+}

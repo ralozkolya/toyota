@@ -1,0 +1,178 @@
+.ui-accordion-header {
+	background: none !important;
+}
+
+.specs:not(:first-child) {
+	display: none;
+}
+
+.specs > h2 {
+	text-transform: uppercase;
+}
+
+.accordion > .row > div {
+	border-bottom: solid 1px #ccc;
+	padding: 10px 0;
+}
+
+.accordion > .row > div:last-child {
+	border: none;
+}
+
+.accordion > .row > div:nth-child(even) {
+	background: #efefef;
+}
+
+.col-md-6:first-child {
+	font-weight: bold;
+}
+
+.btn-group {
+	display: block !important;
+}
+
+.btn-group > .btn {
+	font-size: 16px;
+	padding: 15px;
+	display: block !important;
+	float: none !important;
+	margin: 0 auto !important;
+	width: 100%;
+}
+
+.accessory, .configuration {
+	text-align: center;
+	float: left;
+	width: 180px;
+	margin: 20px;
+	font-family: BPG Arial;
+	position: relative;
+}
+
+.accessory-info {
+	cursor: pointer;
+}
+
+.info-container {
+	display: none;
+	position: absolute;
+	padding: 15px;
+	line-height: 18px;
+	border-radius: 10px;
+	bottom: 20px;
+	overflow-y: auto;
+	max-height: 200px;
+	width: 300px;
+	background: #555;
+	left: 0;
+	color: white;
+	z-index: 100;
+}
+
+.accessory:last-child .info-container {
+	right: 0;
+	left: auto;
+}
+
+.configuration > img {
+	width: 150%;
+	cursor: pointer;
+}
+
+.configuration {
+	color: #aaa;
+}
+
+.configuration.active {
+	color: black;
+	font-weight: bold;
+}
+
+.accessory > .icon {
+	width: 180px;
+	height: 180px;
+	background-position: center;
+	background-size: cover;
+}
+
+/* .slider-arrow-left, .slider-arrow-right {
+	top: 200px !important;
+} */
+
+.accessories-arrow {
+	display: none;
+}
+
+h2.message {
+	display: none;
+}
+
+.gallery-image {
+	height: 100%;
+	float: left;
+	margin: 0 1px;
+	cursor: zoom-in;
+}
+
+.video-poster {
+	height: 100%;
+	margin: 0 1px;
+	width: auto !important;
+}
+
+.thumb > img {
+	height: 300px;
+	width: auto !important;
+}
+
+.sub-navigation {
+	background-color: rgba(30,42,50,.9);
+	color: #ccc;
+	font-size: 18px;
+	padding: 10px;
+	text-align: center;
+}
+
+.sub-navigation > .container > a {
+	display: block;
+	margin: 20px;
+}
+
+#accessory-details {
+	display: none;
+	position: absolute;
+	padding: 15px;
+	line-height: 18px;
+	border-radius: 10px;
+	width: 300px;
+	background: #555;
+	color: white;
+	z-index: 1000;
+}
+
+@media (min-width: 992px) {
+	.btn-group > .btn {
+		float: left;
+		display: inline-block !important;
+		float: left !important;
+		margin: inherit;
+		width: auto;
+	}
+
+	.btn-group {
+		display: inline-block !important;
+	}
+
+	.accessories-arrow {
+		display: inline;
+	}
+
+	/* .scrollpane {
+		height: 300px;
+	} */
+
+	.sub-navigation > .container > a {
+		display: inline-block;
+		margin: 0 20px;
+	}
+}

@@ -1,0 +1,40 @@
+img {
+	max-width: 100%;
+}
+
+.content {
+	font-family: 'BPG Arial';
+}
+
+.content h1 {
+	font-family: 'BPG Nino Mtavruli Regular';
+	text-transform: uppercase;
+}
+
+.post {
+	border-bottom: solid 1px #ccc;
+	padding: 20px 0;
+}
+
+.post h2 {
+	margin-top: 0;
+}
+
+.thumb {
+	padding-top: 75%;
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 20px;
+}
+
+.event {
+	margin-top: 20px;
+}
+
+.event-name {
+	height: 3em;
+}
+
+.more-button {
+	margin-bottom: 20px;
+}

@@ -1,0 +1,66 @@
+@font-face {
+	font-family: BPG Arial;
+	src: url('../fonts/bpg_arial.ttf');
+}
+
+@font-face {
+	font-family: BPG Nino Mtavruli Regular;
+	src: url('../fonts/bpg_nino_mtavruli_regular.ttf');
+}
+
+img {
+	max-width: 100%;
+}
+
+.bpg-arial {
+	font-family: BPG Arial !important;
+}
+
+.bpg-nino-mtavruli-regular {
+	font-family: BPG Nino Mtavruli Regular !important;
+}
+
+.header {
+	padding: 5px;
+	margin-bottom: 30px;
+	border-bottom: solid 1px #ccc;
+}
+
+.header > img {
+	margin-right: 50px;
+}
+
+.header > a {
+	display: inline-block;
+	padding: 10px;
+	font-family: BPG Arial;
+	font-size: 18px;
+}
+
+.unstyled {
+	text-decoration: none !important;
+	color: inherit !important;
+}
+
+.success-message, .error-message {
+	padding: 15px;
+	font-size: 18px;
+	border-radius: 5px;
+	margin: 20px 0;
+	font-family: BPG Arial;
+}
+
+.success-message {
+	border: solid 1px #3c763d;
+}
+
+.error-message {
+	border: solid 1px #a94442;
+}
+
+.banner-thumb {
+	height: 100px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}

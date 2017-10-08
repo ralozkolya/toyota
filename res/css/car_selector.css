@@ -1,0 +1,7 @@
+.car-selector > .col-sm-3 {
+	text-align: center;
+}
+
+.car-selector > .col-sm-3 > a > img {
+	width: 100%;
+}

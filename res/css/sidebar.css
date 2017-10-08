@@ -1,0 +1,22 @@
+.sidebar > ul {
+	list-style: none;
+	padding: 10px 0;
+	text-transform: uppercase;
+}
+
+.sidebar-link {
+	display: inline-block;
+	padding: 10px 0;
+	font-size: 20px;
+	font-family: 'BPG Nino Mtavruli Regular';
+}
+
+.sidebar-link.active {
+	border-left: solid 2px #ccc;
+	padding-left: 10px;
+}
+
+.sidebar-link, .sidebar-link:hover, .sidebar-link:active, .sidebar-link:focus {
+	text-decoration: none;
+	color: inherit;
+}

@@ -1,0 +1,23 @@
+.hybrid-marker {
+	font-size: 12px;
+	background: #00a0f0;
+	padding: 2px;
+	border-radius: 2px;
+	position: absolute;
+	top: 45px;
+	left: 10px;
+	color: white;
+	opacity: 0.8;
+}
+
+.col-centered {
+	transition: background 0.5s;
+}
+
+.col-centered:hover {
+	background: #ddd;
+}
+
+.col-centered > img {
+	width: 100%;
+}

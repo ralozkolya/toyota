@@ -1,0 +1,4 @@
+.delete-photo, .delete-video {
+	width: 100%;
+	cursor: pointer;
+}

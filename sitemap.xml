@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>http://toyota-tbilisi.com/</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://toyota-tbilisi.com/pages/home</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://toyota-tbilisi.com/pages/catalog</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://toyota-tbilisi.com/pages/warranty</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://toyota-tbilisi.com/pages/service</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://toyota-tbilisi.com/pages/history</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://toyota-tbilisi.com/pages/about_us</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://toyota-tbilisi.com/pages/contact</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://toyota-tbilisi.com/cars/corolla</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://toyota-tbilisi.com/cars/prius</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://toyota-tbilisi.com/cars/camry</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://toyota-tbilisi.com/cars/rav4</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://toyota-tbilisi.com/cars/prado</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://toyota-tbilisi.com/cars/land_cruiser_200</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://toyota-tbilisi.com/cars/hilux</loc>
+  <changefreq>monthly</changefreq>
+</url>
+</urlset>
