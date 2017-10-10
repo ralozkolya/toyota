@@ -172,6 +172,7 @@ class Pages extends CI_Controller {
 
 		$this->data['children'] = $this->Pages_m->get_children('about-us');
 		$this->data['title'] = $this->data['event']['title'].' - '.$this->data['title'];
+		$this->data['files'] = $this->Video_m->get_files($this->data['event']['id']);
 		$this->data['current_page'] = 'about-us';
 		$this->load->view('pages/videos', $this->data);
 	}

@@ -38,3 +38,18 @@ img {
 .more-button {
 	margin-bottom: 20px;
 }
+
+.thumb > .glyphicon {
+	font-size: 50px;
+	color: white;
+	opacity: .7;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity .4s;
+}
+
+.thumb:hover > .glyphicon {
+	opacity: 1;
+}
