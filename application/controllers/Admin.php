@@ -576,6 +576,7 @@ class Admin extends CI_Controller {
 
 		$this->data['modify_url'] = 'photo_event';
 		$this->data['delete_file'] = 'delete_event_photo';
+		$this->data['add_file'] = 'add_event_photo';
 
 		$this->load->model('Photo_m');
 
@@ -587,6 +588,7 @@ class Admin extends CI_Controller {
 
 		$this->data['event'] = $this->Photo_m->get($id);
 		$this->data['files'] = $this->Photo_m->get_files($id);
+		$this->data['event_type'] = 'photos';
 		$this->load->view('pages/admin/event', $this->data);
 	}
 
@@ -647,6 +649,8 @@ class Admin extends CI_Controller {
 	public function videos($id = NULL) {
 
 		$this->data['modify_url'] = 'video_event';
+		$this->data['delete_file'] = 'delete_event_video';
+		$this->data['add_file'] = 'add_event_video';
 
 		$this->load->model('Video_m');
 
@@ -657,6 +661,8 @@ class Admin extends CI_Controller {
 		}
 
 		$this->data['event'] = $this->Video_m->get($id);
+		$this->data['files'] = $this->Video_m->get_files($id);
+		$this->data['event_type'] = 'videos';
 		$this->load->view('pages/admin/event', $this->data);
 	}
 
@@ -737,10 +743,6 @@ class Admin extends CI_Controller {
 		echo json_encode($response);
 	}
 
-	public function add_event_video() {
-
-	}
-
 	public function delete_event_photo($id) {
 
 		$this->load->model('Photo_m');
@@ -749,6 +751,43 @@ class Admin extends CI_Controller {
 			$this->session->set_flashdata(SUCCESS_MESSAGE, lang('deleted_successfully'));
 		} else {
 			$this->session->set_flashdata(ERROR_MESSAGE, lang('error_occured'));
+		}
+
+		redirect($this->agent->referrer());
+	}
+
+	public function delete_event_video($id) {
+
+		$this->load->model('Video_m');
+
+		if($this->Video_m->delete_video($id)) {
+			$this->session->set_flashdata(SUCCESS_MESSAGE, lang('deleted_successfully'));
+		} else {
+			$this->session->set_flashdata(ERROR_MESSAGE, lang('error_occured'));
+		}
+
+		redirect($this->agent->referrer());
+	}
+
+	public function add_event_video() {
+
+		$this->load->model('Video_m');
+
+		if($this->input->post()) {
+			$this->form_validation->set_rules('id', 'lang:id', 'trim|required|numeric');
+			$this->form_validation->set_rules('youtube_id', 'lang:youtube_link', 'trim|required');
+
+			if($this->form_validation->run()) {
+
+				if($this->Video_m->add_video($this->input->post())) {
+					$this->session->set_flashdata(SUCCESS_MESSAGE, lang('updated_successfully'));
+				} else {
+					$this->session->set_flashdata(ERROR_MESSAGE, lang('error_occured'));
+				}
+
+			} else {
+				$this->session->set_flashdata(ERROR_MESSAGE, validation_errors());
+			}
 		}
 
 		redirect($this->agent->referrer());

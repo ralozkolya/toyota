@@ -112,3 +112,6 @@ $lang['mails'] = 'მეილები';
 $lang['contact_email'] = 'მეილი საკონტაქტო ფორმისთვის';
 $lang['test_drive_email'] = 'მეილი ტესტ-დრაივისთვის';
 $lang['service_email'] = 'მეილი სერვისზე ჩასაწერად';
+
+$lang['youtube_link'] = 'YouTube-ს ბმული';
+$lang['loading'] = 'იტვირთება...';

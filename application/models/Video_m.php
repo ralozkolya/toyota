@@ -2,6 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Video_m extends CI_Model {
+		
+	// https://img.youtube.com/vi/DcZ1bFfDvSQ/hqdefault.jpg
 
 	public function get_list($page = 1) {
 
@@ -24,6 +26,15 @@ class Video_m extends CI_Model {
 
 	public function get($id) {
 		return $this->db->get_where('video_events', ['id' => $id])->row_array();
+	}
+
+	public function get_files($event) {
+		return $this->db->get_where('event_videos', ['event' => $event])->result_array();
+	}
+
+	public function add_video($data) {
+		$data['youtube_id'] = $this->get_id($data['youtube_id']);
+		return $this->db->insert('event_videos', ['youtube_id' => $data['youtube_id'], 'event' => $data['id']]);
 	}
 
 	public function add($data) {
@@ -73,6 +84,11 @@ class Video_m extends CI_Model {
 		return FALSE;
 	}
 
+	public function delete_video($id) {
+		$this->db->where('id', $id);
+		return $this->db->delete('event_videos');
+	}
+
 	public function count() {
 		return $this->db->get('video_events')->num_rows();
 	}
@@ -111,6 +127,17 @@ class Video_m extends CI_Model {
 		$this->image_lib->resize();
 
 		return $this->upload->data('file_name');
+	}
+
+	private function get_id($url) {
+
+		$id = parse_url($url, PHP_URL_QUERY);
+
+		if(!$id) {
+			$id = parse_url($url, PHP_URL_PATH);
+		}
+
+		return preg_replace('/(\/|v=)/', '', $id);
 	}
 
 }

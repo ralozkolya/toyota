@@ -48,13 +48,22 @@
 	<h2 class="bpg-nino-mtavruli-regular"><?php echo lang('gallery'); ?></h2>
 
 	<div class="accordion">
-		<h2 class="bpg-nino-mtavruli-regular"><?php echo lang('add_photo'); ?></h2>
+		<?php if($event_type === 'photos') { ?>
+			<h2 class="bpg-nino-mtavruli-regular"><?php echo lang('add_photo'); ?></h2>
+		<?php } else { ?>
+			<h2 class="bpg-nino-mtavruli-regular"><?php echo lang('add_video'); ?></h2>
+		<?php } ?>
 		<div>
-			<form id="photo-upload" action="<?php echo base_url('admin/add_event_photo'); ?>" method="post" enctype="multipart/form-data">
+			<form id="photo-upload" action="<?php echo base_url("admin/{$add_file}"); ?>" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="id" value="<?php echo $event['id']; ?>">
 				<div class="form-group">
-					<label for="photos"><?php echo lang('photos'); ?></label>
-					<input id="files-input" class="form-control" type="file" name="image" multiple required>
+					<?php if($event_type === 'photos') { ?>
+						<label for="files-input"><?php echo lang('photos'); ?></label>
+						<input id="files-input" class="form-control" type="file" name="image" multiple required>
+					<?php } else { ?>
+						<label for="youtube_id"><?php echo lang('youtube_link'); ?></label>
+						<input id="youtube_id" class="form-control" type="text" name="youtube_id" required>
+					<?php } ?>
 				</div>
 				<div class="form-group">
 					<input id="upload-submit" type="submit" class="btn btn-success" value="<?php echo lang('add'); ?>">
@@ -62,13 +71,20 @@
 			</form>
 		</div>
 		<?php if(!empty($files)) { ?>
-			<h2 class="bpg-nino-mtavruli-regular"><?php echo lang('delete_photo'); ?></h2>
+			<?php if($event_type === 'photos') { ?>
+				<h2 class="bpg-nino-mtavruli-regular"><?php echo lang('delete_photo'); ?></h2>
+			<?php } else { ?>
+				<h2 class="bpg-nino-mtavruli-regular"><?php echo lang('delete_video'); ?></h2>
+			<?php } ?>
 			<div class="container-fluid">
 				<div class="row">
 					<?php foreach($files as $f) { ?>
+						<?php $thumb_url = array_key_exists('image', $f)
+							? base_url("uploads/events/thumb_{$f['image']}")
+							: "https://img.youtube.com/vi/DcZ1bFfDvSQ/hqdefault.jpg"; ?>
 						<div class="col-sm-3">
 							<a class="delete-file" href="<?php echo base_url("admin/{$delete_file}/{$f['id']}"); ?>">
-								<img class="event-file" src="<?php echo base_url("uploads/events/thumb_{$f['image']}"); ?>">
+								<img class="event-file" src="<?php echo $thumb_url; ?>">
 							</a>
 						</div>
 					<?php } ?>
@@ -99,6 +115,8 @@
 		if(!files.length) return;
 
 		$('#upload-submit').attr('disabled', 'disabled');
+
+		$('#upload-submit').val('<?php echo lang('loading'); ?>');
 
 		var waiting = false;
 		var currentIndex = 0;
