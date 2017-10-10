@@ -15,9 +15,9 @@
 	<a class="pull-left unstyled" href="<?php echo base_url().'admin/photos'; ?>">
 		<?php echo lang('photos'); ?>
 	</a>
-	<!-- <a class="pull-left unstyled" href="<?php echo base_url().'admin/videos'; ?>">
+	<a class="pull-left unstyled" href="<?php echo base_url().'admin/videos'; ?>">
 		<?php echo lang('videos'); ?>
-	</a> -->
+	</a>
 	<a class="pull-left unstyled" href="<?php echo base_url().'admin/user'; ?>">
 		<?php echo lang('user'); ?>
 	</a>
