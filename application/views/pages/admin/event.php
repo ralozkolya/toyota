@@ -81,7 +81,7 @@
 					<?php foreach($files as $f) { ?>
 						<?php $thumb_url = array_key_exists('image', $f)
 							? base_url("uploads/events/thumb_{$f['image']}")
-							: "https://img.youtube.com/vi/DcZ1bFfDvSQ/hqdefault.jpg"; ?>
+							: "https://img.youtube.com/vi/{$f['youtube_id']}/hqdefault.jpg"; ?>
 						<div class="col-sm-3">
 							<a class="delete-file" href="<?php echo base_url("admin/{$delete_file}/{$f['id']}"); ?>">
 								<img class="event-file" src="<?php echo $thumb_url; ?>">
