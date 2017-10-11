@@ -128,6 +128,7 @@ class Pages extends CI_Controller {
 		$this->data['children'] = $this->Pages_m->get_children('about-us');
 		$this->data['title'] = lang('gallery').' - '.$this->data['title'];
 		$this->data['events'] = $this->$model->get_list($page);
+		$this->data['sidebar_active'] = $type;
 
 		$this->config->load('pagination');
 		$config = $this->config->item('pagination');
@@ -157,6 +158,7 @@ class Pages extends CI_Controller {
 		$this->data['title'] = $this->data['event']['title'].' - '.$this->data['title'];
 		$this->data['files'] = $this->Photo_m->get_files($this->data['event']['id']);
 		$this->data['current_page'] = 'about-us';
+		$this->data['sidebar_active'] = 'photos';
 		$this->load->view('pages/photos', $this->data);
 	}
 
@@ -174,6 +176,7 @@ class Pages extends CI_Controller {
 		$this->data['title'] = $this->data['event']['title'].' - '.$this->data['title'];
 		$this->data['files'] = $this->Video_m->get_files($this->data['event']['id']);
 		$this->data['current_page'] = 'about-us';
+		$this->data['sidebar_active'] = 'videos';
 		$this->load->view('pages/videos', $this->data);
 	}
 
@@ -220,6 +223,7 @@ class Pages extends CI_Controller {
 		$this->data['children'] = $this->Pages_m->get_children('about-us');
 		$this->data['page'] = $this->Pages_m->get_page('news');
 		$this->data['title'] = lang('news').' - '.$this->data['title'];
+		$this->data['sidebar_active'] = 'news';
 
 		$this->config->load('pagination');
 		$config = $this->config->item('pagination');
@@ -238,6 +242,7 @@ class Pages extends CI_Controller {
 		$this->load->model('News_m');
 		$this->data['children'] = $this->Pages_m->get_children('about-us');
 		$this->data['post'] = $this->News_m->get_by_slug($slug);
+		$this->data['sidebar_active'] = 'news';
 
 		if(!$this->data['post']) {
 			show_404();

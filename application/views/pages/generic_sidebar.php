@@ -14,19 +14,7 @@
 		<div class="row">
 			<?php if(!empty($children)): ?>
 				<div class="col-sm-4 col-md-3 sidebar">
-					<ul>
-						<?php foreach($children as $c): ?>
-							<li>
-								<?php if($sidebar_active === $c['slug']) { ?>
-									<a class="sidebar-link active" href="<?php echo base_url("pages/{$c['slug']}"); ?>">
-								<?php } else { ?>
-									<a class="sidebar-link" href="<?php echo base_url("pages/{$c['slug']}"); ?>">
-								<?php } ?>
-									<?php echo $c['title']; ?>
-								</a>
-							</li>
-						<?php endforeach; ?>
-					</ul>
+					<?php $this->load->view('elements/sidebar'); ?>
 				</div>
 				<div class="col-sm-8 col-md-9 content">
 					<?php echo $page[BODY]; ?>
