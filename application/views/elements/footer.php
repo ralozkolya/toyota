@@ -43,14 +43,11 @@
 			© TOYOTA CENTER TBILISI LTD
 		</div>
 		<div class="col-sm-6 text-right">
-			<a class="unstyled-link social" href="#">
+			<a class="unstyled-link social" href="https://www.facebook.com/toyotatbilisi/" target="_blank">
 				<span class="fa fa-facebook"></span>
 			</a>
-			<a class="unstyled-link social" href="#">
-				<span class="fa fa-twitter"></span>
-			</a>
-			<a class="unstyled-link social" href="#">
-				<span class="fa fa-youtube"></span>
+			<a class="unstyled-link social" href="https://www.instagram.com/toyotacentertbilisi/" target="_blank">
+				<span class="fa fa-instagram"></span>
 			</a>
 		</div>
 	</div>
