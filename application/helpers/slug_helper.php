@@ -6,6 +6,11 @@ function slug($title, $table, $slug_label = 'slug') {
 	$ci =& get_instance();
 	
 	$or_slug = url_title($title, 'dash', TRUE);
+
+	if(empty($or_slug)) {
+		$or_slug = 'id';
+	}
+
 	$slug = $or_slug;
 
 	$num_rows;
