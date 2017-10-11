@@ -5,7 +5,7 @@ function slug($title, $table, $slug_label = 'slug') {
 
 	$ci =& get_instance();
 	
-	$or_slug = url_title($title, 'dash', TRUE);
+	$or_slug = url_title($title, '-', TRUE);
 
 	if(empty($or_slug)) {
 		$or_slug = 'id';
