@@ -131,10 +131,18 @@ class Video_m extends CI_Model {
 
 	private function get_id($url) {
 
-		$id = parse_url($url, PHP_URL_QUERY);
+		$result = NULL;
+
+		parse_str(parse_url($url, PHP_URL_QUERY), $result);
+
+		$id = array_key_exists('v', $result) ? $result['v'] : NULL;
 
 		if(!$id) {
 			$id = parse_url($url, PHP_URL_PATH);
+		}
+
+		if(!$id) {
+			$id = $url;
 		}
 
 		return preg_replace('/(\/|v=)/', '', $id);
