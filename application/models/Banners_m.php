@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Banners_m extends CI_Model {
 
 	public function get_banners() {
-		$this->db->select(['id', LANG.'_name as name']);
+		$this->db->select(['id', LANG.'_name as name', 'url']);
 		return $this->db->get(BANNERS)->result_array();
 	}
 
