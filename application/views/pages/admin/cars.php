@@ -57,25 +57,27 @@
 				</div>
 			</form>
 		</div>
-		<h2 class="bpg-nino-mtavruli-regular"><?php echo lang('delete_photo'); ?></h2>
-		<div class="container-fluid">
-			<?php $i = 0; foreach($gallery as $picture): ?>
-				<?php if($i % 6 === 0): ?>
-					<div class="row delete-picture">
-				<?php endif; ?>
-				<div class="col-sm-2">
-					<img class="delete-photo" data-id="<?php echo $picture[ID]; ?>" data-slug="<?php echo $picture[SLUG]; ?>"
-						src="<?php echo base_url().'uploads/gallery/'.$picture[NAME]; ?>">
-				</div>
-				<?php if($i % 6 === 5): ?>
+		<?php if(!empty($gallery)) { ?>
+			<h2 class="bpg-nino-mtavruli-regular"><?php echo lang('delete_photo'); ?></h2>
+			<div class="container-fluid">
+				<?php $i = 0; foreach($gallery as $picture): ?>
+					<?php if($i % 6 === 0): ?>
+						<div class="row delete-picture">
+					<?php endif; ?>
+					<div class="col-sm-2">
+						<img class="delete-photo" data-id="<?php echo $picture[ID]; ?>" data-slug="<?php echo $picture[SLUG]; ?>"
+							src="<?php echo base_url().'uploads/gallery/'.$picture[NAME]; ?>">
 					</div>
-				<?php endif; $i++; ?>
-			<?php endforeach; ?>
+					<?php if($i % 6 === 5): ?>
+						</div>
+					<?php endif; $i++; ?>
+				<?php endforeach; ?>
 
-			<?php if($i % 6 !== 0): ?>
-				</div>
-			<?php endif; ?>
-		</div>
+				<?php if($i % 6 !== 0): ?>
+					</div>
+				<?php endif; ?>
+			</div>
+		<?php } ?>
 	</div>
 </div>
 <br><br><br>
@@ -104,25 +106,27 @@
 				</div>
 			</form>
 		</div>
-		<h2 class="bpg-nino-mtavruli-regular"><?php echo lang('delete_video'); ?></h2>
-		<div class="container-fluid">
-			<?php $i = 0; foreach($videos as $video): ?>
-				<?php if($i % 6 === 0): ?>
-					<div class="row delete-picture">
-				<?php endif; ?>
-				<div class="col-sm-2">
-					<img class="delete-video" data-id="<?php echo $video[ID]; ?>" data-slug="<?php echo $video[SLUG]; ?>"
-						src="<?php echo base_url().'uploads/videos/posters/'.$video[POSTER]; ?>">
-				</div>
-				<?php if($i % 6 === 5): ?>
+		<?php if(!empty($videos)) { ?>
+			<h2 class="bpg-nino-mtavruli-regular"><?php echo lang('delete_video'); ?></h2>
+			<div class="container-fluid">
+				<?php $i = 0; foreach($videos as $video): ?>
+					<?php if($i % 6 === 0): ?>
+						<div class="row delete-picture">
+					<?php endif; ?>
+					<div class="col-sm-2">
+						<img class="delete-video" data-id="<?php echo $video[ID]; ?>" data-slug="<?php echo $video[SLUG]; ?>"
+							src="<?php echo base_url().'uploads/videos/posters/'.$video[POSTER]; ?>">
 					</div>
-				<?php endif; $i++; ?>
-			<?php endforeach; ?>
+					<?php if($i % 6 === 5): ?>
+						</div>
+					<?php endif; $i++; ?>
+				<?php endforeach; ?>
 
-			<?php if($i % 6 !== 0): ?>
-				</div>
-			<?php endif; ?>
-		</div>
+				<?php if($i % 6 !== 0): ?>
+					</div>
+				<?php endif; ?>
+			</div>
+		<?php } ?>
 	</div>
 </div>
 <br><br><br>
