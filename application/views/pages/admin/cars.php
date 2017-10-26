@@ -222,8 +222,12 @@
 		<div class="container-fluid">
 			<form method="post" enctype="multipart/form-data" action="<?php echo base_url().'admin/add_accessory'; ?>">
 				<div class="form-group">
-					<label for="accessory-name"><?php echo lang('first_name'); ?></label>
-					<input class="form-control" type="text" name="name" id="accessory-name" required>
+					<label for="accessory-ka-name"><?php echo lang('ka_name'); ?></label>
+					<input class="form-control" type="text" name="ka_name" id="accessory-ka-name" required>
+				</div>
+				<div class="form-group">
+					<label for="accessory-en-name"><?php echo lang('en_name'); ?></label>
+					<input class="form-control" type="text" name="en_name" id="accessory-en-name" required>
 				</div>
 				<div class="form-group">
 					<label for="category"><?php echo lang('category'); ?></label>
