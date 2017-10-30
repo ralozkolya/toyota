@@ -3,8 +3,8 @@
 <head>
 
 <?php $this->load->view('elements/head'); ?>
-<link rel="stylesheet" href="<?php echo base_url('res/css/about_us.css'); ?>">
-<link rel="stylesheet" href="<?php echo base_url('res/css/sidebar.css'); ?>">
+<link rel="stylesheet" href="<?php echo base_url('res/css/about_us.css?v='.V); ?>">
+<link rel="stylesheet" href="<?php echo base_url('res/css/sidebar.css?v='.V); ?>">
 
 </head>
 <body>
@@ -20,9 +20,8 @@
 			<?php else: ?>
 				<div class="col-xs-12 content">
 			<?php endif; ?>
-					<div class="text-center">
-						<img src="<?php echo base_url("uploads/news/{$post['image']}"); ?>" alt="<?php echo $post['title']; ?>">
-					</div>
+					<br>
+					<img class="post-image" src="<?php echo base_url("uploads/news/{$post['image']}"); ?>" alt="<?php echo $post['title']; ?>">
 					<h1><?php echo $post['title']; ?></h1>
 					<div><?php echo $post['body']; ?></div>
 				</div>

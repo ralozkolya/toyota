@@ -148,3 +148,5 @@ define('SUCCESS_MESSAGE', 'success_message');
 define('ERROR_MESSAGE', 'error_message');
 
 define('OFFERS_PER_PAGE', 20);
+
+define('V', 1);
