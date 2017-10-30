@@ -148,15 +148,13 @@
 					<div>
 						<strong><?php echo htmlspecialchars($accessory[NAME]); ?></strong>
 					</div>
-					<div class="accessory-info">
-						<?php echo lang('details'); ?>
-						<span class="glyphicon glyphicon-info-sign"></span>
-						<?php if($accessory[DESCRIPTION]): ?>
-							<div class="info-container bpg-arial">
-								<?php echo $accessory[DESCRIPTION]; ?>
-							</div>
-						<?php endif; ?>
-					</div>
+					<?php if($accessory[DESCRIPTION]): ?>
+						<div class="accessory-info">
+							<?php echo lang('details'); ?>
+							<span class="glyphicon glyphicon-info-sign"></span>
+							<div class="info-container bpg-arial"><?php echo $accessory[DESCRIPTION]; ?></div>
+						</div>
+					<?php endif; ?>
 				</div>
 			<?php endforeach; ?>
 		</div>
